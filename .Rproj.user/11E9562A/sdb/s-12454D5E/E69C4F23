@@ -1,0 +1,18 @@
+{
+    "contents" : "## This will find the best hosipital in the state",
+    "created" : 1437870958994.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3176939882",
+    "id" : "E69C4F23",
+    "lastKnownWriteTime" : 1437871082,
+    "path" : "C:/Users/Ross Weston/GitHub Repos/US Medicare Hospitals/Best Hospital.R",
+    "project_path" : "Best Hospital.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
