@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1438230119729.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C373D895",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "qefxistdvj",
+        "caption" : "StateDataFrame",
+        "contentUrl" : "grid_resource/gridviewer.html?env=_rs_no_env&obj=StateDataFrame&cache_key=qefxistdvj",
+        "displayedObservations" : "5",
+        "environment" : "_rs_no_env",
+        "object" : "StateDataFrame",
+        "totalObservations" : "5",
+        "variables" : "46"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

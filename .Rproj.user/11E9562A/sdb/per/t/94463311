@@ -1,0 +1,18 @@
+{
+    "contents" : "rankhospital <- function(state, outcome, num = \"best\") {\n    ## Read outcome data\n    ## Check that state and outcome are valid\n    ## Return hospital name in that state with the given rank\n    ## 30-day death rate\n    \n    data<-read.csv(\"outcome-of-care-measures.csv\",colClasses = \"character\")\n    \n    \n    if(outcome==\"heart attack\"){\n        MortalityOfInterest<-11\n    }else if(outcome==\"heart failure\"){\n        MortalityOfInterest<-17\n    }else if(outcome==\"pneumonia\"){\n        MortalityOfInterest<-23\n    }else {\n        stop(\"invalid outcome\") \n    }\n    \n    \n    StateVector<-unique(data$State)\n    StateTest<-state %in% StateVector\n    if(StateTest==FALSE){\n        stop(\"invalid state\")\n    }\n    \n    \n    splitList<-split(data,data$State)\n    \n    OrderedStateList<-suppressWarnings(lapply(splitList,function(x) {x[order(as.numeric(x[,MortalityOfInterest]),x[,2],na.last = NA),]}))\n    \n    StateDataFrame<-OrderedStateList[[state]]\n    \n    NumberOfHospitals<-length(StateDataFrame[,2])\n    \n    if(num==\"best\"){\n        PositionOfInterest<-1\n    }else if(num==\"worst\"){\n        PositionOfInterest<-NumberOfHospitals\n    }else if(num>NumberOfHospitals){\n        return(NA)\n    }else{\n        PositionOfInterest<-num\n    }\n    \n    HospitalOfInterest<-StateDataFrame[[PositionOfInterest,2]]\n    HospitalOfInterest\n    \n    \n    \n    \n    \n    \n    \n}",
+    "created" : 1438232056733.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3432670763",
+    "id" : "94463311",
+    "lastKnownWriteTime" : 1438244373,
+    "path" : "C:/Users/Ross Weston/GitHub Repos/US Medicare Hospitals/rankhospital.R",
+    "project_path" : "rankhospital.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : true,
+    "type" : "r_source"
+}
